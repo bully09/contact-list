@@ -1,0 +1,68 @@
+<div class="row">
+
+  <div class="col-lg-4">
+
+    <!-- Search Widget -->
+    <div class="card my-4">
+      <h5 class="card-header">Search</h5>
+      <div class="card-body">
+        <div class="input-group">
+          <input type="text" name="inputSearch" [(ngModel)]="search" class="form-control" autofocus>
+        </div>
+      </div>
+    </div>
+
+    <!-- Sort Widget -->
+    <div class="card my-4">
+      <h5 class="card-header">Sort by</h5>
+      <div class="card-body">
+        <div class="row">
+          <div class="col-lg-6">
+            <ul class="list-unstyled mb-0">
+              <li>
+                <div class="form-check">
+                  <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                  <label class="form-check-label" for="exampleCheck1">Name</label>
+                </div>
+              </li>
+              <li>
+                <div class="form-check">
+                  <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                  <label class="form-check-label" for="exampleCheck1">Phone</label>
+                </div>
+              </li>
+              <li>
+                <div class="form-check">
+                  <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                  <label class="form-check-label" for="exampleCheck1">Age</label>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-lg-8">
+    <h1 class="my-4 text-center">My contacts</h1>
+    <div class="row">
+      <!--Contact Widget-->
+      <div class="col-lg-4 col-md-4 mb-4 portfolio-item" *ngFor="let m of list">
+        <div class="card h-100">
+          <div class="card-header">
+            <h4>{{m.name}}</h4>
+          </div>
+          <div class="card-body">
+            <h5 class="card-title">
+              <a class="nav-link">{{m.phone}}</a>
+            </h5>
+            <p class="card-text">{{m.nickName}}</p>
+          </div>
+          <div class="card-footer">Age {{m.age}}</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
