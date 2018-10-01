@@ -24,7 +24,7 @@ export class ContactComponent implements OnInit {
   }
 
   loadContacts() {
-    let url = URL_ENUM.BASE_URL + 'contact';
+    let url = URL_ENUM.BASE_URL + '/contact';
 
     let headers: HttpHeaders = new HttpHeaders({
         'Authorization': 'Basic ' + sessionStorage.getItem('token')
